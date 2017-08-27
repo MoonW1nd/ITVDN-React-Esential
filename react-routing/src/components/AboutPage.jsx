@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./AboutPage.less";
+
 class AboutPage extends React.Component {
 	render () {
 		return (
