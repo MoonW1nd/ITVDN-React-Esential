@@ -13,6 +13,7 @@
     "classnames": "^2.2.3",
     "jquery": "*",
     "less": "^2.6.0",
+    "prop-types": "^15.5.10",
     "react": "*",
     "react-dom": "*",
     "react-router": "^2.0.0-rc6"
