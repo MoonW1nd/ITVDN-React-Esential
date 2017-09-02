@@ -7,6 +7,7 @@ import App from './App.jsx';
 import AboutPage from './components/AboutPage.jsx';
 import InboxPage from './components/InboxPage.jsx';
 import Message from './components/Message.jsx';
+import NotFound from './components/NotFound.jsx';
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -16,6 +17,7 @@ ReactDOM.render(
 				<Route path='/inbox/message/:messageId' component={Message}/>
 			</Route>
 		</Route>
+		<Route path="*" component={NotFound}/>
 	</Router>,
 	document.getElementById("mount-point")
 );
