@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from "react";
 import PropTypes from "prop-types";
-import {Router, Route, hashHistory,context} from 'react-router';
+import {Router, Route, hashHistory} from 'react-router';
 
 import App from './App.jsx';
 import AboutPage from './components/AboutPage.jsx';
@@ -13,7 +13,7 @@ ReactDOM.render(
 		<Route path='/' component={App}>
 			<Route path='/about' component={AboutPage}/>
 			<Route path="/inbox" component={InboxPage}>
-				<Route path="/inbox/message/:messageId" component={Message}/>
+				<Route path='/inbox/message/:messageId' component={Message}/>
 			</Route>
 		</Route>
 	</Router>,

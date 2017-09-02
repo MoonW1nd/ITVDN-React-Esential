@@ -1,25 +1,21 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-
 import MessagePreview from "./MessagePreview.jsx";
 import messages from '../messages.json';
+import Message from "./Message.jsx";
 
 class InboxPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			messages,
-			router
+			messages
 		}
 	}
 
-	getChildContext() {
-		return {router: this.state.router};
-	}
-
 	handlePreviewClick(messageId) {
-		this.context.router.push(`/inbox/message/${messageId}`);
+		// console.log (this.context.router);
+		this.context.route.push(`/inbox/message/${messageId}`)
 	}
 
 	render () {
@@ -38,14 +34,20 @@ class InboxPage extends React.Component {
 					}
 				</div>
 				<div className="message-container">
+					<Message/>
 					{this.props.children}
 				</div>
 			</div>
 		)
 	}
 }
-InboxPage.contextTypes = {
-	router: PropTypes.object.isRequired
+
+InboxPage.propTypes = {
+
 };
+InboxPage.contextTypes = {
+	route: PropTypes.object.isRequired
+};
+
 
 export default InboxPage;
