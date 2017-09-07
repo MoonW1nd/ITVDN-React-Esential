@@ -34,7 +34,6 @@ class InboxPage extends React.Component {
 					}
 				</div>
 				<div className="message-container">
-					<Message/>
 					{this.props.children}
 				</div>
 			</div>
@@ -43,7 +42,7 @@ class InboxPage extends React.Component {
 }
 
 InboxPage.propTypes = {
-
+	route: PropTypes.object.isRequired
 };
 InboxPage.contextTypes = {
 	route: PropTypes.object.isRequired
